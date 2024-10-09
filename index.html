@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Suhu Modern</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-700 min-h-screen flex items-center justify-center">
+    <div class="container bg-gray-900 rounded-lg shadow-lg p-8 max-w-md w-full text-gray-200">
+        <h1 class="text-3xl font-bold text-center text-blue-400 mb-6">Kalkulator Suhu</h1>
+        <form id="temperatureForm" class="space-y-4">
+            <div class="flex space-x-2">
+                <input type="number" id="temperatureInput" class="flex-grow p-2 border rounded bg-gray-700 text-gray-200 placeholder-gray-400" placeholder="Masukkan suhu" required>
+                <select id="fromUnit" class="p-2 border rounded bg-gray-700 text-gray-200">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">Kelvin</option>
+                </select>
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition duration-300">Konversi</button>
+        </form>
+        <div id="result" class="mt-6 hidden">
+            <h2 class="text-xl font-semibold text-blue-400 mb-3">Hasil Konversi:</h2>
+            <div id="conversionResult" class="space-y-2"></div>
+            <div id="explanation" class="mt-4 text-sm text-gray-400"></div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
